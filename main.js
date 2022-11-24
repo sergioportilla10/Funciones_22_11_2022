@@ -1,15 +1,15 @@
-//Funcion por declaracion
-//Es la fubncion mas comun y mas usada ya que estara declarada para usarla en cuaklquier momento en el codigo
+//Funcion por Expresion
+//En esta funcion es habitual guardar funciones dentro de variables, las cuales le permitiran ejecutarlas mas adelante
 
 addEventListener("DOMContentLoaded", (e)=>{
 
 
-    function saludar () {
+   const saludo = function saludar () { // Aca el nombre de la funcion se vuelve redundante y se omite ya que la variable saludo, hace de funcion
         
-        return "Hola"
+        return "Hola";
     }
-    saludar(); //Podemos ejecutar la funcion saludar() incluso antes de crearla y va a funcionar ya que javascript primero busca las declaraciones de funciones y despues el resto del codigo
+    saludo(); // Usamos la variable saludo como funcion y el nombre de la funcion se podria omitir y el codigo funcionara correctamente
 
-    console.log(saludar());
+    console.log(saludo());
 }
 )
