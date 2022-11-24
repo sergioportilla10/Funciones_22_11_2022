@@ -1,12 +1,15 @@
-//Funcion como Objetos
-//Esta funcion no se suele usar mucho en producion, pero podemos ver que se puede usar una funcion y obejto al tiempo
+//Funciones anónimas
+//Son funciones sin nombre, ya que van alojadas dentro de una variable
 
 addEventListener("DOMContentLoaded", (e)=>{
 
 
-    const saludar = new Function("return 'Hola';"); //Aca vemos un ejemplo de como se usa, es interesante ver que se puede hacer
+const saludo = function () {    // A diferencia de la funcion por declaracion, si esta la ejecutamos antres de declarar la variable nos arrojara error
+    return "Hola";
+  };
+  
+  saludo; 
+  saludo();             //Esta funcion cada vez que la necesitemos la podremos utilizar haciendo referencia a ella
 
-    saludar(); 
-
-    console.log(saludar());
+    console.log(saludo());
 })
